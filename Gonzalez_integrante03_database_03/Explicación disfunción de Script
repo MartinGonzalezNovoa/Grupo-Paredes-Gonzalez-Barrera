@@ -1,0 +1,1 @@
+Estimadas profesoras, cree este archivo para explicarles por qué no funciona el script de NoteBook. Y esto pasa porque el código que utilicé para visualizar la base de datos, hay una parte en mi base de datos que no se puede leer el utf-8. No Encontré una solución para esto, por lo que recomiendo descargar la base de datos y abrirla directamente desde Excel. 
