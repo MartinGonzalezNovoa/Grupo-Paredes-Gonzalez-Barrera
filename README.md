@@ -1,29 +1,53 @@
-# Grupo-Paredes-Gonzalez-Barrera
-Repositorio de grupo Trinidad Paredes, Martín González, Diego Barrera
+# Enterga 2 explicación de datos
 
-## PROPUESTA
+Martín González
 
-Desde el mundial de Canada sub 20 que Chile no presenta una buena camada de jugadores, de esos que llegan a los mejores equipos del mundo. **_La famosa generación dorada está en decadencia_** y lejos de sus mejores años. Ahora es el momento de que nuevos nombres tomen el liderazgo de la selección adulta. 
+1. Explicación 
 
-Para esto es clave que haya un buen desarrollo de las categorías inferiores y cuidar el crecimiento de los jugadores en las categorías superiores. Es aquí donde nuestro trabajo tiene como objetivo, detectar de manera empírica a las mejores promesas de nuestro país, para así poder construir una **nueva generación dorada**. 
+Para construir la base de datos de todos los jugadores de fútbol chilenos que juegan en primera división de cualquier liga del mundo, lo que hicimos fue lo siguiente. 
 
-![imagen](https://thumbs.dreamstime.com/b/ni%C3%B1os-jugando-f%C3%BAtbol-jugadores-j%C3%B3venes-pateando-un-partido-de-en-estadio-c%C3%A9sped-torneo-juvenil-los-chicos-juegan-el-campo-278911508.jpg)
+Primero los datos los tuvimos que extraer de páginas web especializadas en fútbol. Las bases de datos de estas páginas web son privadas, por lo que no pudimos descargar directamente la información. Es por esto que tuvimos que utilizar un "Scraper" para poder extraer toda la información. 
 
-El proyecto tiene como objetivo determinar a través de datos estadísticos un coeficiente para evaluar cuales son criterios mínimos que establecen que un jugador sea una joven promesa de la Liga chilena.
+Para esto, descargué una libreria que encontré a través de un video en youtube, llamada LanusStats. En esta librería hay diferentes páginas de fútbol como Fbref, FotMob, 365 Scores, SofaScore y Transfermarkt. 
 
-Para esto nos concentraremos en 3 jóvenes delanteros que se desempeñan en **Colo Colo, Universidad de Chile y Universidad Católica**. Para determinar el coeficiente de cada jugador basado en su rendimiento nos centraremos en las estadísticas de goles, asistencias, centros, regates completados, grandes ocasiones creadas, minutos y pases claves. 
+En cada una de estas páginas web, la librería tiene ceirtos códigos que cumplen ciertas funciones, como por ejemplo: scrapear información de los equipos, jugadores, temporadas de equipos, estadísticas, etc. 
 
-![imagen](https://www.soyazul.cl/wp-content/uploads/2024/06/Maximiliano-Guerrero-Creditos-de-la-foto-Agencia-Aton-4.jpg)
+Para lograr esto descargué la librería en Google Collab, con el siguiente código:
 
-**_Hipótesis_**: 
+pip install LanusStats
+pip install --upgrade LanusStats
 
-- A través de una base de datos de las estadísticas de los jugadores de fútbol, se puede descubrir cuales son las próximas promesas de la liga chilena  
+Despupés importé la página web que quería usar, por ejemplo de Fbref:
 
-**_Datos_**: 
+import LanusStats as ls  
+fbref = ls.Fbref()
 
-- Vamos a trabajar con datos cuantitativos referente a las estadísticas de los futbolistas. Estos serán extraídos de las acciones de los jugadores durante los partidos oficiales de la liga chilena de fútbol de la temporada 2023-2024 
+Después ejecuté el código según la función que necesitaba, en mi base de datos como necesitaba la estadística de todos los jugadores chilenos de las diferentes ligas, fui descargando liga por liga todos los jugadores. Por lo tanto un codigo de ejemplo sería el siguiente:
 
-Al respecto se han publicado diferentes notas abarcando el tema de manera general, **no presenta justificación o respaldo cuantitativo del rendimiento de los jugadores**
+fbref = ls.Fbref()
+equipos = fbref.get_all_player_season_stats("Primera Division Chile", "2023", save_csv=False)
 
-**Link a video de youtube**: 
-https://youtu.be/PPem1U0Sc1s
+En la primera línea se pone la página web que quiero usar, en la segunda línea le asigno un térimno al código, en este caso "equipos", y despues vuevlo a poner la página web, en este caso "fbref".
+
+Una vez ejecutado el código, lo paso a formato csv. En este caso el codigo no me dejó pasarlo directamente a csv porque no tenía formato pandas, por lo que le pedí a la IA de Google Collab que escribiera un código para cambiar el formato, en este caso fue el siguiente:
+
+import pandas as pd
+# Assuming the desired DataFrame is the first element of the tuple
+equipos_df = equipos[0]  # or equipos[1], depending on which DataFrame you want to save
+# Now you can save the DataFrame to a CSV file
+equipos_df.to_csv("equipos_chilenos.csv", encoding="utf-8", index=False)
+
+Una vez hecho esto, descargué el archivo en formato csv, y lo abrí desde Excel. Ya en Excel, lo único que necesitaba limpiar fue todos los jugadores de las ligas que no son chilenos, por lo que simplemente en la columna B donde dice "stats_Nations" filtré por jugadores chilenos, en este caso denominados como "cl CHI"
+
+En mi base de datos, decidí usar sólo la página web Fbref, ya que antes utilicé Sofascore y Transfermarkt, esta útlima entregó los datos desactualizados e incorrectos. Además, Fbref me entregó la nacionalidad, equipo, liga y todas las estadísticas de la temporada 2023. En cambio Sofascore y Transfermarkt me entregó la información por separada. 
+
+Link a librería de LanusStats: https://github.com/federicorabanos/lanusStats?tab=readme-ov-file#sofascore
+Link a Fbref: https://fbref.com/es/
+Link a Sofascore: https://www.sofascore.com/es/
+Link a: https://www.transfermarkt.es/detailsuche/spielerdetail/suche/51169443
+
+Ejemplos de preguntas que le podemos hacer a la base de datos:
+
+Lo fundamental en nuestro trabajo es analizar como influye una agencia de representación en la carrera de un jugador. Es por esto que la base de datos que construíl, se le puede consultar por estadísticas de la temporada 2023, como goles, asistencias, minutos jugados, tarjetas amarillas, etc. Pero el verdadero valor se dará cuando fusionemos las diferentes bases de datos para hacer un match entre los jugadores y su agencia de representación y la evolución de sus estadísticas, valor de mercado, traspaso a otros clubes cuando es representado por una agencia de representación. Y lo mismo en caso contrario, si un jugador no tiene agencia de represetnación. 
+
+También he de mencionar, que en la organización del grupo me centré en la labor de scrapear toda la información, mas que en la limpieza de la base de datos.    
