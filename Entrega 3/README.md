@@ -1,0 +1,11 @@
+# Readme Grupo Barrera Gonzalez Paredes
+
+En esta oportunidad nos encargamos de diseñar la estructura y la identidad visual de la webstory. Para esto hicimos un perfilamiento de usuarios guiandonos con mapas de empatía pudimos definir ciertos aspectos de los tres usuarios solicitados. Además creamos una identidad visual de la webstory, donde definimos una paleta de colores, la tipografía, un identificador grafico y el naming. Por ultimo creamos un wireframe para definir la estrucutra y jerarquización de la información que otorguemos a la página. 
+
+Se hizo lluvia de ideas para poder reconocer que camino se seguirá con el camino del branding de la webstory. A partir de esto se eligió los elementos a desarrollar, entre ellos se encuentra, el nombre del trabajo, la paleta de colores, el logo, la tipografía. Se mantiene abierta la idea de establecer nuevos elementos visuales y renombrar la pagina si parece pertinente
+
+Para el perfilamiento de usuario nos centramos en investigar los mapas de empatia y como funcionaban estos con tal de poder desarrollar los perfiles acorde a las necesidades  y proyecciones de la webstory.  También se comparó la técnica user-persona, con el fin de crear los usuarios Juan, Pedro y Santiago. Guiandonos por estos recursos definimos las categorias que finalmente utilizamos. En resumen, se creo un usuario dedicado al periodismo deportivo, un fantico del futbol y un consumidor casual
+
+La propuesta de navegación da la página web hecho a través de un wireframe, es de carcater simple, donde lo que buscamos pirncipalmente es que los usuarios puedan identificar ciertos aspectos visuales como imágenes y gráficos, de tal forma que puedan entender adecuadamente la historia que desarrollamos. Además integramos algunos links a información adicional del tema, como un reportaje sobre el poder que tienen las agencias de representación en Chile, como también un link a un artículo donde se explica la relevancia de las agencias en los jugadores. 
+
+https://youtu.be/6tsUnPzUovM?si=CdBYBsQ-xO4Y_Us8
