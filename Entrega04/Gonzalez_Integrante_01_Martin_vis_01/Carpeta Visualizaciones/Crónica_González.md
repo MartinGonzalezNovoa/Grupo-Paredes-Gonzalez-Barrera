@@ -1,0 +1,7 @@
+# En el fútbol los minutos es vida
+
+En el fútbol profesional, la cantidad de minutos que disputa un jugador a lo largo de una temporada no sólo es una estadística o un número más, es un reflejo de su nivel competitivo y la confianza que el entrenador técnico deposita en él. Poder acumular minutos a los jugadores, les garantiza poder desarrollarse, tener visibilidad y poder construir una carrera a largo plazo. Es en esos momentos, cuando están dentro de la cancha, cuando tienen la oportunidad de demostrar su talento, habilidades, profesionalidad, como también aumentar su valor de mercado. 
+
+Es muy difícil para los jugadores asumir que no son una prioridad para su equipo, y pasar largos minutos en el banquillo de suplentes no solo afecta a su rendimiento deportivo al no tener continuidad, no jugar puede generar dudas e incertidumbre a los jugadores donde algunos empiezan a dudar incluso de sus capacidades futbolísticas. Los problemas de carácter psicológico pueden ser mucho más graves incluso que una lesión, o simplemente el hecho en sí de no disputar minutos. 
+
+Es por esto que es fundamental que las agencias de representación de los futbolistas, tomen decisiones correctas y acertadas respecto al futuro de sus jugadores, y elijan con precisión y de forma fundamentada en qué equipos van a jugar, ya que muchas veces es más valioso jugar en un equipo de menor dimensión que garantice minutos para el futbolista, que ir a uno grande donde no tendrá certezas suficientes respecto a la cantidad de minutos que podrá disputar. 
