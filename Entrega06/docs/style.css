@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#ball {
+    width: 150px;
+    height: 150px;
+    background: url('http://upload.wikimedia.org/wikipedia/en/e/ec/Soccer_ball.svg') no-repeat center center;
+    background-size: contain;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 250px;
+    animation: bounce 2s ease-out forwards;
+}
+
+#title {
+    font-size: 80px;
+    color:  #6ff1bb;
+    opacity: 0;
+    transform: scale(0);
+    animation: titleAppear 1.5s ease forwards;
+    animation-delay: 2.2s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80% { transform: translateY(0); }
+    40% { transform: translateY(-150px); }
+    60% { transform: translateY(-100px); }
+    100% { 
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+@keyframes titleAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Header fijo con logo y secciones */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 100;
+}
+
+header .logo img {
+    width: 100px;  /* Ajusta según lo que necesites */
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color:  #6ff1bb;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color:  white;
+}
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;    
+}
+
+.container{ 
+    max-width: 1200px;
+    margin: 0 auto
+
+}
+
+
+
+.menu{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.introduccion {
+
+    padding: 100px 0; 
+    background-color: black ;
+    position: relative;
+}
+
+.introduccion-content {
+    text-align: center;
+
+}
+
+.introduccion-content h2{
+    font-size: 50px;
+    line-height: 70px;
+    color:  #6ff1bb;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+    
+}
+
+.txt-p{
+    font-size: 16px;
+    color: white;
+    padding: 0 250px;
+    margin-bottom: 35px;
+
+}
+
+.introduccion-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+}
+
+.introduccion.group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.introduccion-1 {
+    padding: 0 25px;
+}
+
+.introduccion-1 img {
+    width: 200px;
+}
+
+.introudccion-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.coffe-1 h3 {
+    color:#6ff1bb;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.nueva-seccion {
+    padding: 80px 20px;
+    background-color: black;
+    color: white;
+}
+
+.nueva-seccion .titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #6ff1bb;
+    margin-bottom: 20px;
+}
+
+.nueva-seccion .texto-seccion {
+    max-width: 1500px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #ddd;
+    text-align: justify;
+
+}
+
+.nueva-seccion .centrar-imagen {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center;    /* Centra la imagen verticalmente si es necesario */
+    margin: 20px 0;         /* Espaciado superior e inferior */
+}
+
+.nueva-seccion .centrar-imagen img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor sin distorsión */
+    height: auto;    /* Mantiene las proporciones originales de la imagen */
+    border-radius: 5px; /* Opcional: Bordes redondeados para un estilo más moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: Sombra para destacar la imagen */
+}
+
+.nueva-seccion .video-container {
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.nueva-seccion .video-container iframe {
+    max-width: 100%; /* Asegura que el video se ajuste al ancho del contenedor */
+    width: 800px;
+    height: 500px; /* Mantiene las proporciones del video */
+    border-radius: 10px; /* Opcional: Bordes redondeados para un diseño más moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: Añade sombra para destacar el video */
+}
+
+.grafico-seccion {
+    padding: 80px 20px;
+    background-color: black;
+    color: white;
+}
+
+.grafico-seccion .titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #6ff1bb;
+    margin-bottom: 20px;
+}
+
+.grafico-seccion .texto-seccion {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #ddd;
+    text-align: justify;
+}
+
+.grafico-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.grafico-container .infogram-embed {
+    max-width: 100%;
+    width: 700px;  /* Ajusta el tamaño según necesites */
+    height: 700px;
+}
+
+.grafico-footer {
+    text-align: center;
+    font-size: 13px;
+    color: #989898;
+    margin-top: 20px;
+}
+
+.futbol-chileno-seccion {
+    padding: 80px 20px;
+    background-color: black;
+    color: white;
+}
+
+.futbol-chileno-seccion .titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #6ff1bb;
+    margin-bottom: 20px;
+}
+
+.futbol-chileno-seccion .texto-seccion {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #ddd;
+    text-align: justify;
+}
+
+/* Contenedor para las imágenes */
+.imagenes-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+/* Estilo individual para cada imagen */
+.imagen {
+    width: 60%;
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Sección de Logotipos de Agencias */
+#agencias {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#agencias h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.agencias-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logos img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4);
+}
+
+.agencias-influencia-seccion {
+    padding: 80px 20px;
+    background-color: black;
+    color: white;
+}
+
+.agencias-influencia-seccion .titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #6ff1bb;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para los gráficos lado a lado */
+.graficos-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* Estilo para cada gráfico */
+.grafico {
+    width: 45%; /* Ajusta el ancho de cada gráfico */
+}
+
+.grafico .infogram-embed {
+    width: 100%;
+    height: auto;
+}
+
+.agencias-influencia-seccion .texto-seccion {
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #ddd;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.agencias-posiciones-seccion {
+    padding: 80px 20px;
+    background-color: black;
+    color: white;
+}
+
+/* Contenedor para los gráficos lado a lado */
+.graficos-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* Estilo para cada gráfico */
+.grafico {
+    width: 45%; /* Ajusta el ancho de cada gráfico */
+}
+
+.grafico .infogram-embed {
+    width: 100%;
+    height: auto;
+}
+
+.agencias-posiciones-seccion .texto-seccion {
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #ddd;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #6ff1bb;
+    font-weight: bold; /* Opcional para darle más énfasis */
+}
+
+.highlight {
+    color: #6ff1bb;
+    font-weight: bold; /* Opcional para darle más énfasis */
+}
+
+
+.section {
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    color: #6ff1bb; /* Color del título */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.infogram-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infogram-embed {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.infogram-footer {
+    padding: 8px 0;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    border-top: 1px solid #dadada;
+    margin: 0 30px;
+    color: #989898;
+}
+
+.infogram-footer a {
+    color: #989898;
+    text-decoration: none;
+}
+
+.infogram-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo de la sección */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Diseño adaptable */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Estilo de cada elemento */
+.profile-item {
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Estilo de las imágenes */
+.profile-image {
+    width: 200px; /* Tamaño de la imagen */
+    height: 200px; /* Tamaño cuadrado */
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 2px solid #6ff1bb; /* Borde verde */
+}
+
+/* Estilo del texto */
+.profile-text {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+
+.footer {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    padding: 10px 0; /* Espaciado interno */
+    font-size: 0.9rem; /* Tamaño de texto más pequeño */
+    border-top: 1px solid #6ff1bb; /* Línea superior para separar el footer */
+}
+
+.footer p {
+    margin: 5px 0; /* Espaciado entre párrafos */
+}
+
+.section {
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin: 0 auto;
+}
+
+.section p {
+    max-width: 1200px; /* Limita el ancho del párrafo */
+    margin: 20px auto; /* Centra el párrafo horizontalmente */
+    text-align: justify; /* Justifica el texto para un mejor formato */
+    line-height: 1.6; /* Mejora la legibilidad aumentando el espacio entre líneas */
+    font-size: 16px; /* Ajusta el tamaño de fuente */
+    padding: 0 20px; /* Añade un poco de espacio interno lateral */
+}
+
+.highlight {
+    color: #6ff1bb; /* Cambia el color del texto */
+    font-weight: bold; /* Opcional: resalta el texto con negrita */
+}
+
+
+
